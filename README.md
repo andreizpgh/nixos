@@ -13,8 +13,6 @@
 
 `sudo nixos-generate-config --root /mnt`
 
-> Use basic-configuration.nix
-
 `sudo wget -P /mnt/etc/nixos/configuration.nix https://raw.githubusercontent.com/andreizpgh/nixos/main/basic-configuration.nix`
 
 `sudo nixos-install`
@@ -29,11 +27,15 @@
 - **Activate an internet connection**
 `nmtui`
 
-- Synchronize "nixos" folder via Syncthing
+- **Synchronize "nixos" folder via Syncthing**
 
-- **Rewrite configuration.nix and reboot**
-  - `sudo rm /etc/nixos/configuration.nix && mv /home/andrei/nixos/nixos/configuration.nix /etc/nixos && ln -s /etc/nixos/configuration.nix /home/andrei/nixos/nixos/configuration.nix`
-  - `sudo reboot`
+- **Rewrite configuration.nix**
+```
+sudo rm /etc/nixos/configuration.nix && mv /home/andrei/nixos/nixos/configuration.nix /etc/nixos && ln -s /etc/nixos/configuration.nix /home/andrei/nixos/nixos/configuration.nix
+```
+
+- **Reboot** 
+`sudo reboot`
 
 ### 4. Setting-up
 
