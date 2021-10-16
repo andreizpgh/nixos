@@ -13,7 +13,9 @@
 
 `sudo nixos-generate-config --root /mnt`
 
-`sudo wget -P /mnt/etc/nixos/configuration.nix https://raw.githubusercontent.com/andreizpgh/nixos/main/basic-configuration.nix`
+```
+sudo wget -P /mnt/etc/nixos/configuration.nix https://raw.githubusercontent.com/andreizpgh/nixos/main/basic-configuration.nix
+```
 
 `sudo nixos-install`
 
