@@ -33,7 +33,7 @@ sudo wget -P /mnt/etc/nixos/configuration.nix https://raw.githubusercontent.com/
 
 - **Rewrite configuration.nix**
 ```
-sudo rm /etc/nixos/configuration.nix && mv /home/andrei/nixos/nixos/configuration.nix /etc/nixos && ln -s /etc/nixos/configuration.nix /home/andrei/nixos/nixos/configuration.nix
+sudo rm /etc/nixos/configuration.nix && sudo ln -s /home/andrei/nixos/nixos/configuration.nix /etc/nixos/configuration.nix && rm /home/andrei/nixos/nixos/hardware-configuration.nix && sudo mv /etc/nixos/hardware-configuration.nix /home/andrei/nixos/nixos && sudo ln -s /home/andrei/nixos/nixos/hardware-configuration.nix /etc/nixos/hardware-configuration.nix
 ```
 
 - **Reboot** 
