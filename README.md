@@ -43,7 +43,7 @@ sudo rm /etc/nixos/configuration.nix && mv /home/andrei/nixos/nixos/configuratio
 
 - **Command**
 ```
-sudo mkdir /home/andrei/.config/alacritty /home/andrei/.config/nvim /home/andrei/.config/rofi /home/andrei/.config/zathura && rm -rf /home/andrei/nixos/.git && rm /home/andrei/.config/vifm/vifmrc && stow -d /home/andrei/nixos . && chmod +x /home/andrei/.scripts/zettelkasten.sh && sh -c 'curl -fLo "${XDG_DATA_HOME:-$HOME/.local/share}"/nvim/site/autoload/plug.vim --create-dirs \
+sudo mkdir /home/andrei/.config/alacritty /home/andrei/.config/nvim /home/andrei/.config/rofi /home/andrei/.config/zathura && rm -rf /home/andrei/Desktop /home/andrei/nixos/.git && rm /home/andrei/.config/vifm/vifmrc && stow -d /home/andrei/nixos . && chmod +x /home/andrei/.scripts/zettelkasten.sh && sh -c 'curl -fLo "${XDG_DATA_HOME:-$HOME/.local/share}"/nvim/site/autoload/plug.vim --create-dirs \
        https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim' && echo '
 " Enable tab autocompletion
 silent! iunmap <buffer> <Tab>' >> ~/.config/nvim/plugged/vimwiki/ftplugin/vimwiki.vim && nix-env -iA nixos.zsh-autosuggestions && nix-env -iA nixos.zsh-syntax-highlighting && lxappearance
