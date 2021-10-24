@@ -78,12 +78,9 @@
   # List packages installed in system profile. To search, run:
   # $ nix search wget
   environment.systemPackages = with pkgs; [
-    wget
     firefox
-    tdesktop
     neovim
     alacritty
-    git
     cinnamon.nemo
   ];
 
