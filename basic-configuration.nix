@@ -79,9 +79,9 @@
   # $ nix search wget
   environment.systemPackages = with pkgs; [
     firefox
+    tdesktop
     neovim
     alacritty
-    cinnamon.nemo
   ];
 
   # Some programs need SUID wrappers, can be configured further or are
