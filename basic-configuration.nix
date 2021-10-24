@@ -84,6 +84,7 @@
     neovim
     alacritty
     git
+    cinnamon.nemo
   ];
 
   # Some programs need SUID wrappers, can be configured further or are
