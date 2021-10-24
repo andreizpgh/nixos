@@ -29,7 +29,8 @@ sudo wget -P /mnt/etc/nixos/configuration.nix https://raw.githubusercontent.com/
 - **Activate an internet connection**
 `nmtui`
 
-- **Synchronize "nixos" folder via Syncthing**
+- **Synchronize "nixos" and "Org" folders via Syncthing**
+`mkdir /home/andrei/nixos /home/andrei/Org`
 
 - **Rewrite configuration.nix**
 ```
