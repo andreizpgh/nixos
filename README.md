@@ -48,5 +48,10 @@ sudo mkdir /home/andrei/.config/alacritty /home/andrei/.config/nvim /home/andrei
 " Enable tab autocompletion
 silent! iunmap <buffer> <Tab>' >> ~/.config/nvim/plugged/vimwiki/ftplugin/vimwiki.vim && nix-env -iA nixos.zsh-autosuggestions && nix-env -iA nixos.zsh-syntax-highlighting && lxappearance
 ``` 
+
+- **Install Doom Emacs**
+```
+git clone https://github.com/hlissner/doom-emacs ~/.emacs.d && yes | ~/.emacs.d/bin/doom install && rm /home/andrei/.doom.d/config.el /home/andrei/.doom.d/init.el /home/andrei/.doom.d/packages.el && mv /home/andrei/nixos/nixos/config.el /home/andrei/.doom.d && mv /home/andrei/nixos/nixos/init.el /home/andrei/.doom.d && mv /home/andrei/nixos/nixos/packages.el /home/andrei/.doom.d && ln -s /home/andrei/.doom.d/config.el /home/andrei/nixos/nixos/config.el && ln -s /home/andrei/.doom.d/init.el /home/andrei/nixos/nixos/init.el && ln -s /home/andrei/.doom.d/packages.el /home/andrei/nixos/nixos/packages.el && ~/.emacs.d/bin/doom sync
+```
  
 - **Log in into Firefox and import 'Scroll Anywhere', 'Vimium' and 'Simple Translate' configs**
