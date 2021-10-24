@@ -14,23 +14,24 @@
 `sudo nixos-generate-config --root /mnt`
 
 ```
-sudo wget -P /mnt/etc/nixos/configuration.nix https://raw.githubusercontent.com/andreizpgh/nixos/main/basic-configuration.nix
+nix-env -iA nixos.wget && sudo rm /mnt/etc/nixos/configuration.nix && sudo wget -P /mnt/etc/nixos https://raw.githubusercontent.com/andreizpgh/nixos/main/basic-configuration.nix && sudo rename /mnt/etc/nixos/basic-configuration.nix /mnt/etc/nixos/configuration.nix
 ```
 
 `sudo nixos-install`
 
-`sudo reboot`
+`sudo poweroff`
 
 ### 3. Further configuration
 
 - **Log in as root and set password**
 `passwd andrei`
 
+- **Log in as 'andrei'**
+
 - **Activate an internet connection**
 `nmtui`
 
-- **Synchronize "nixos" and "Org" folders via Syncthing**
-`mkdir /home/andrei/nixos /home/andrei/Org`
+- **Copy 'nixos' and 'Org' folders from phone**
 
 - **Rewrite configuration.nix**
 ```
@@ -41,6 +42,8 @@ sudo rm /etc/nixos/configuration.nix && sudo ln -s /home/andrei/nixos/nixos/conf
 `sudo reboot`
 
 ### 4. Setting-up
+
+- **Synchronize "nixos" and "Org" folders via Syncthing**
 
 - **Command**
 ```
