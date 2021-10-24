@@ -51,7 +51,7 @@ silent! iunmap <buffer> <Tab>' >> ~/.config/nvim/plugged/vimwiki/ftplugin/vimwik
 
 - **Install Doom Emacs**
 ```
-git clone https://github.com/hlissner/doom-emacs ~/.emacs.d && yes | ~/.emacs.d/bin/doom install && rm /home/andrei/.doom.d/config.el /home/andrei/.doom.d/init.el /home/andrei/.doom.d/packages.el && mv /home/andrei/nixos/nixos/config.el /home/andrei/.doom.d && mv /home/andrei/nixos/nixos/init.el /home/andrei/.doom.d && mv /home/andrei/nixos/nixos/packages.el /home/andrei/.doom.d && ln -s /home/andrei/.doom.d/config.el /home/andrei/nixos/nixos/config.el && ln -s /home/andrei/.doom.d/init.el /home/andrei/nixos/nixos/init.el && ln -s /home/andrei/.doom.d/packages.el /home/andrei/nixos/nixos/packages.el && ~/.emacs.d/bin/doom sync
+git clone https://github.com/hlissner/doom-emacs ~/.emacs.d && yes | ~/.emacs.d/bin/doom install && rm /home/andrei/.doom.d/config.el /home/andrei/.doom.d/custom.el /home/andrei/.doom.d/init.el /home/andrei/.doom.d/packages.el && ln -s /home/andrei/nixos/nixos/config.el /home/andrei/.doom.d/config.el && ln -s /home/andrei/nixos/nixos/custom.el /home/andrei/.doom.d/custom.el && ln -s /home/andrei/nixos/nixos/init.el /home/andrei/.doom.d/init.el && ln -s /home/andrei/nixos/nixos/packages.el /home/andrei/.doom.d/packages.el && ~/.emacs.d/bin/doom sync
 ```
  
 - **Log in into Firefox and import 'Scroll Anywhere', 'Vimium' and 'Simple Translate' configs**
