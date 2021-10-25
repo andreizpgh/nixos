@@ -14,7 +14,7 @@
 `sudo nixos-generate-config --root /mnt`
 
 ```
-nix-env -iA nixos.wget && sudo rm /mnt/etc/nixos/configuration.nix && sudo wget -P /mnt/etc/nixos https://raw.githubusercontent.com/andreizpgh/nixos/main/basic-configuration.nix && sudo sudo mv /mnt/etc/nixos/basic-configuration.nix /mnt/etc/nixos/configuration.nix
+nix-env -iA nixos.wget && sudo rm /mnt/etc/nixos/configuration.nix && sudo wget -P /mnt/etc/nixos https://raw.githubusercontent.com/andreizpgh/nixos/main/basic-configuration.nix && sudo mv /mnt/etc/nixos/basic-configuration.nix /mnt/etc/nixos/configuration.nix
 ```
 
 `sudo nixos-install`
@@ -42,14 +42,28 @@ sudo rm /etc/nixos/configuration.nix && sudo ln -s /home/andrei/nixos/nixos/conf
 - **Rebuild** 
 `sudo nixos-rebuild switch`
 
-- **Log out and log in again**
+- **Reboot**
+`sudo reboot`
 
 ### 4. Setting-up
 
-- **Command**
+- **Set-up config files**
 ```
-sudo mkdir /home/andrei/.config/alacritty /home/andrei/.config/nvim /home/andrei/.config/rofi /home/andrei/.config/zathura && rm /home/andrei/.config/vifm/vifmrc /home/andrei/.config/qtile/config.py && stow -d /home/andrei/nixos . && chmod +x /home/andrei/.scripts/zettelkasten.sh && sh -c 'curl -fLo "${XDG_DATA_HOME:-$HOME/.local/share}"/nvim/site/autoload/plug.vim --create-dirs \
-       https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim' && nix-env -iA nixos.zsh-autosuggestions && nix-env -iA nixos.zsh-syntax-highlighting && lxappearance
+mkdir /home/andrei/.config/alacritty /home/andrei/.config/nvim /home/andrei/.config/rofi /home/andrei/.config/zathura && rm /home/andrei/.config/vifm/vifmrc /home/andrei/.config/qtile/config.py && stow -d /home/andrei/nixos . && chmod +x /home/andrei/.scripts/zettelkasten.sh && sh -c 'curl -fLo "${XDG_DATA_HOME:-$HOME/.local/share}"/nvim/site/autoload/plug.vim --create-dirs \
+       https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim'
+```
+
+- **Install nvim plugins**
+
+`PlugStatus`
+
+`PlugInstall`
+
+- **Some other commands**
+```
+echo '
+" Enable tab autocompletion
+silent! iunmap <buffer> <Tab>' >> ~/.config/nvim/plugged/vimwiki/ftplugin/vimwiki.vim && nix-env -iA nixos.zsh-autosuggestions && nix-env -iA nixos.zsh-syntax-highlighting && lxappearance
 ``` 
 
 - **Install Doom Emacs**
