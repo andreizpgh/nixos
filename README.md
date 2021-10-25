@@ -14,7 +14,7 @@
 `sudo nixos-generate-config --root /mnt`
 
 ```
-nix-env -iA nixos.wget && sudo rm /mnt/etc/nixos/configuration.nix && sudo wget -P /mnt/etc/nixos https://raw.githubusercontent.com/andreizpgh/nixos/main/basic-configuration.nix && sudo rename /mnt/etc/nixos/basic-configuration.nix /mnt/etc/nixos/configuration.nix
+nix-env -iA nixos.wget && sudo rm /mnt/etc/nixos/configuration.nix && sudo wget -P /mnt/etc/nixos https://raw.githubusercontent.com/andreizpgh/nixos/main/basic-configuration.nix && sudo sudo mv /mnt/etc/nixos/basic-configuration.nix /mnt/etc/nixos/configuration.nix
 ```
 
 `sudo nixos-install`
@@ -54,7 +54,13 @@ sudo mkdir /home/andrei/.config/alacritty /home/andrei/.config/nvim /home/andrei
 
 - **Install Doom Emacs**
 ```
-git clone https://github.com/hlissner/doom-emacs ~/.emacs.d && yes | ~/.emacs.d/bin/doom install && rm /home/andrei/.doom.d/config.el /home/andrei/.doom.d/init.el /home/andrei/.doom.d/packages.el && ln -s /home/andrei/nixos/nixos/config.el /home/andrei/.doom.d/config.el && ln -s /home/andrei/nixos/nixos/custom.el /home/andrei/.doom.d/custom.el && ln -s /home/andrei/nixos/nixos/init.el /home/andrei/.doom.d/init.el && ln -s /home/andrei/nixos/nixos/packages.el /home/andrei/.doom.d/packages.el && ~/.emacs.d/bin/doom sync
+git clone --depth 1 https://github.com/hlissner/doom-emacs ~/.emacs.d
+yes | ~/.emacs.d/bin/doom install
+```
+
+- **Configure Doom Emacs**
+```
+rm /home/andrei/.doom.d/config.el /home/andrei/.doom.d/init.el /home/andrei/.doom.d/packages.el && ln -s /home/andrei/nixos/nixos/config.el /home/andrei/.doom.d/config.el && ln -s /home/andrei/nixos/nixos/init.el /home/andrei/.doom.d/init.el && ln -s /home/andrei/nixos/nixos/packages.el /home/andrei/.doom.d/packages.el && ~/.emacs.d/bin/doom sync
 ```
  
 - **Log in into Firefox and import 'Scroll Anywhere', 'Vimium' and 'Simple Translate' configs**
